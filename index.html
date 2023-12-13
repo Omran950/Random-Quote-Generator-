@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes App</title>
+    <link rel="icon" href="images/favicon/pngegg.png" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="home" class="vh-100 py-5">
+      <div class="container text-center py-3">
+        <h1 class="fw-bolder text-capitalize">Quote of the Day</h1>
+        <div class="quote-info py-3">
+          <figure
+            id="photo"
+            class="m-auto rounded-circle overflow-hidden d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="images/Quoteff-.jpg"
+              alt="Oscar Wilde"
+              class="author d-block w-100"
+            />
+          </figure>
+          <p
+            id="author"
+            class="author mt-3 m-auto text-capitalize position-relative"
+          >
+            Welcome to Quotes App !
+          </p>
+          <p id="quote" class="quote py-2 mt-5 rounded-4 m-auto">
+            Press the button below to recieve a random quote!
+          </p>
+        </div>
+        <button
+          type="button"
+          class="btn btn-outline-primary rounded-pill mt-3 px-4 py-2 fs-5 position-relative overflow-hidden"
+          onclick="quoteApp();"
+        >
+          New Quote
+        </button>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

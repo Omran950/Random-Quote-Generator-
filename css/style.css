@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "ubnutu";
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+:root {
+  --trans: 400ms;
+  --trans2: 700ms;
+  --trans3: 900ms;
+  --fs-xxl: 5rem;
+  --fs-lg: 3.5rem;
+  --fs-lg2: 2rem;
+  --fs-m: 1.5rem;
+  --fs-s: 1.2rem;
+  --font: "ubnutu";
+  --main-color: #f28705;
+  --bg-color: #012e40;
+  --border-color: #025159;
+  --text-color: rgb(230, 217, 217);
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text-color);
+}
+
+::selection {
+  color: var(--main-color);
+  background: var(--border-color);
+}
+
+#home {
+  background-color: var(--bg-color);
+}
+
+#home .container h1 {
+  color: var(--main-color);
+  font-size: var(--fs-xxl);
+}
+
+#home .container .quote-info figure {
+  width: 150px;
+  height: 150px;
+  border: 4px var(--border-color) solid;
+  transition: var(--trans2);
+  -webkit-transition: var(--trans2);
+  -moz-transition: var(--trans2);
+  -ms-transition: var(--trans2);
+  -o-transition: var(--trans2);
+}
+
+#home .container .quote-info figure:hover {
+  transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -ms-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+}
+
+#home .container .quote-info p {
+  font-size: var(--fs-m);
+}
+
+#home .container .quote-info p.author::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: -8px;
+  width: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--border-color);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+
+#home .container .quote-info P.quote {
+  width: 50%;
+}
+
+#home .container .quote-info p.quote:hover {
+  transition: all var(--trans3) linear;
+  -webkit-transition: all var(--trans3) linear;
+  -moz-transition: all var(--trans3) linear;
+  -ms-transition: all var(--trans3) linear;
+  -o-transition: all var(--trans3) linear;
+  box-shadow: 0 4px 8px rgba(242, 135, 5, 0.8);
+  transform: translate(-5px, -5px);
+  -webkit-transform: translate(-5px, -5px);
+  -moz-transform: translate(-5px, -5px);
+  -ms-transform: translate(-5px, -5px);
+  -o-transform: translate(-5px, -5px);
+}
+
+#home .container .quote-info p.quote::after {
+  content: '."';
+}
+
+#home .container .quote-info p.quote::before {
+  content: '" ';
+}
+
+#home .container .btn-outline-primary {
+  color: var(--text-color);
+}
+
+#home .container .btn {
+  border-color: var(--border-color);
+  border-width: 4px;
+  z-index: 1;
+}
+
+#home .container .btn::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  transition: var(--trans);
+  background-color: var(--main-color);
+  -webkit-transition: var(--trans);
+  -moz-transition: var(--trans);
+  -ms-transition: var(--trans);
+  -o-transition: var(--trans);
+  z-index: -1;
+}
+
+#home .container .btn:hover::after {
+  inset: 0;
+}
+
+#home .container .btn:hover {
+  background-color: transparent;
+  color: var(--border-color);
+}
+
+@media screen and (max-width: 992px) {
+  #home .container h1 {
+    font-size: var(--fs-lg);
+  }
+  #home .container .quote-info P.quote {
+    font-size: var(--fs-s);
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #home .container h1 {
+    font-size: var(--fs-lg2);
+  }
+  #home .container .quote-info P.quote {
+    width: 90%;
+  }
+}
